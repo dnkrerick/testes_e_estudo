@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora básica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora simples</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick= "somar()">
+    <div id="res">
+        <p>Resultado...</p>
+    </div>
+
+    <a href="home.html" rel="prev">Voltar para a home.</a>
+
+    <script>
+        function somar() {
+        var txtn1 = document.getElementById("txtn1")
+        var txtn2 = document.getElementById("txtn2")
+
+        var n1 = Number(txtn1.value)
+        var n2 = Number(txtn2.value)
+        var soma = n1 + n2
+
+        var res = document.getElementById("res")
+        res.innerHTML = (`<p>O resultado da soma é <strong>${soma}</strong></p>`)
+
+        }
+
+    </script>
+</body>
+</html>

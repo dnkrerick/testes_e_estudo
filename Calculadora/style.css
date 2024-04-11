@@ -1,0 +1,24 @@
+body {
+  background: #737ffe;
+  color: whitesmoke;
+}
+
+.cabeçalho {
+  text-align: center;
+  background: #274a88;
+  width: 100%;
+  heigth: 150px;
+}
+
+.caixa {
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 10px
+  
+}
+
+.destaque {
+  margin-top: 20px;
+  text-align: center;
+  font: normal 20px Arial;
+}

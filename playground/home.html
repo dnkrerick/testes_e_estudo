@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início do Playground!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="título">Página Inicial</h1>
+    <input type="button" value="Digitar nome" onclick="s_txt_input()">
+    <div id="name-input"></div>
+
+    <script>
+        var name_input = document.querySelector('div#name-input') //relaciona a variável name_input a div name-input
+
+        function s_txt_input() {
+            name_input.innerHTML = ('<p><input type="text" id="name"></p><input type="button" value="Mostrar nome" id="s_name" onclick="s_name()"> <div id="res"></div>')
+        }
+        function s_name() {
+            var txt_name = document.querySelector('input#name')
+            var name = String(txt_name.value)
+            var res = document.querySelector('div#res')
+
+            res.innerHTML = (`<p>Olá <strong>${name}</strong>! É um prazer te receber aqui!</p>`)
+        }
+    </script>
+</body>
+</html>

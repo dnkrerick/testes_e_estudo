@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cabeçalho"><h1>Calculadora:</h1></div>
+  <div class="caixa">
+  <p>
+    <input id="txtn1" type="number" placeholder="Digite aqui"> 
+    <input id="txtn2" type="number" placeholder="Digite aqui">
+  </p>
+    <p>
+      <input value="+" type="button" onclick="somar()">
+      <input value="-" type="button" onclick="subtrair()">
+      <input value="x" type="button" onclick="multiplicar()">
+      <input value="÷" type="button" onclick="dividir()">
+    </p>
+  </div>
+  <div class="destaque" id="res">
+    <p>Resultado aqui.</p>
+  </div>
+    
+  <script>
+  var tn1 = document.getElementById('txtn1')
+  var tn2 = document.getElementById('txtn2')
+  var res = document.getElementById('res')
+  
+  function somar() {
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1 + n2
+    res.innerHTML = (`O Resultado é: <strong>${s}</strong>!`)
+  }
+  
+  function subtrair() {
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1 - n2
+    res.innerHTML = (`O Resultado é: <strong>${s}</strong>!`)
+  }
+  
+  function multiplicar() {
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1 * n2
+    res.innerHTML = (`O Resultado é: <strong>${s}</strong>!`)
+  }
+  
+  function dividir() {
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1 / n2
+    res.innerHTML = (`O Resultado é: <strong>${s}</strong>!`)
+  }
+  </script>
+</body>
+</html>
